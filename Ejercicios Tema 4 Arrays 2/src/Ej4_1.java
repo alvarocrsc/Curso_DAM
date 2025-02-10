@@ -1,7 +1,7 @@
 public class Ej4_1 {
 
     public static void main(String[] args) {
-
+        int[] a
     }
 
     public static int mediana(int[] array) {
