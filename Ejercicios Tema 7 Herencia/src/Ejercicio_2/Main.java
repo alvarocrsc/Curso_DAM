@@ -14,9 +14,9 @@ public class Main {
 
         // Probar calcularSalarioFinal()
         System.out.println("Salario final:");
-        System.out.println("Empleado Permanente: " + empleado1.calcularSalarioFinal());
-        System.out.println("Empleado Contrato Tiempo Completo: " + empleado2.calcularSalarioFinal());
-        System.out.println("Empleado Contrato Medio Tiempo: " + empleado3.calcularSalarioFinal());
+        System.out.println("Ejercicio_4.Empleado Permanente: " + empleado1.calcularSalarioFinal());
+        System.out.println("Ejercicio_4.Empleado Contrato Tiempo Completo: " + empleado2.calcularSalarioFinal());
+        System.out.println("Ejercicio_4.Empleado Contrato Medio Tiempo: " + empleado3.calcularSalarioFinal());
 
         // Probar asignarTarea()
         empleado1.asignarTarea("Desarrollar nuevo sistema");
