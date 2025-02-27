@@ -25,8 +25,10 @@ public class GestorUsuarios {
     public Usuario autenticar(String nombreUsuario, String contrasenya) {
         Usuario usuarioLogin = existeUsuario(nombreUsuario);
         if (nombreUsuario.equals(usuarioLogin.usuario) && (contrasenya.equals(usuarioLogin.contrasenya))) {
+            System.out.println("");
             return usuarioLogin;
         }
+        System.out.println("Usuario o constraseña incorrectos. Intente de nuevo.");
         return null;
     }
 

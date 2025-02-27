@@ -20,11 +20,41 @@ public class Habitacion {
     }
 
     public void reservar(Cliente cliente) {
+        this.estado = Estado.OCUPADA;
+        this.cliente = cliente;
+    }
 
-
+    public boolean estaReservada() {
+        return this.estado == Estado.DISPONIBLE;
     }
 
     public void liberar() {
         estado = Estado.DISPONIBLE;
+        this.cliente = null;
+        System.out.println("La habitación ha sido liberada");
+    }
+
+    public void setTipo(Tipo tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public Cliente getCliente() {
+        return this.cliente;
+    }
+
+    public int getNumero() {
+        return this.numero;
+    }
+
+    public Tipo getTipo() {
+        return this.tipo;
+    }
+
+    public double getPrecio() {
+        return this.precio;
     }
 }

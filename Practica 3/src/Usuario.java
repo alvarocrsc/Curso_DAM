@@ -9,4 +9,12 @@ public abstract class Usuario {
     public boolean autenticar(String nombreUsuario, String contrasenya) {
         return (nombreUsuario == this.usuario && contrasenya == this.contrasenya);
     }
+
+    public String getUsuario() {
+        return this.usuario;
+    }
+
+    public String getContrasenya() {
+        return this.contrasenya;
+    }
 }
