@@ -2,13 +2,15 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class GestorUsuarios {
-    private Usuario[] usuarios;
+    private Usuario[] usuarios = new Usuario[0];
     private int cantidadUsuarios;
 
     private void registrarUsuario(Usuario usuario) {
         if (existeUsuario(usuario.usuario) == null) {
-            Arrays.copyOf(usuarios, usuarios.length + 1);
+            usuarios = Arrays.copyOf(usuarios, usuarios.length + 1);
             usuarios[usuarios.length - 1] = usuario;
+            cantidadUsuarios++;
+            System.out.println("Registro exitoso. Ahora puede iniciar sesión.");
         }
     }
 
@@ -24,7 +26,7 @@ public class GestorUsuarios {
 
     public Usuario autenticar(String nombreUsuario, String contrasenya) {
         Usuario usuarioLogin = existeUsuario(nombreUsuario);
-        if (nombreUsuario.equals(usuarioLogin.usuario) && (contrasenya.equals(usuarioLogin.contrasenya))) {
+        if (usuarioLogin != null && usuarioLogin.autenticar(nombreUsuario,contrasenya)) {
             System.out.println("");
             return usuarioLogin;
         }
@@ -34,7 +36,7 @@ public class GestorUsuarios {
 
     private Usuario existeUsuario(String nombreUsuario) {
         for (Usuario usuarioInstance : usuarios) {
-            if (nombreUsuario == usuarioInstance.usuario) {
+            if (nombreUsuario.equals(usuarioInstance.usuario)) {
                 System.out.println("El usuario introducido ya está registrado.");
                 return usuarioInstance;
             }

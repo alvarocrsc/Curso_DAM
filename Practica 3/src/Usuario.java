@@ -7,7 +7,7 @@ public abstract class Usuario {
     }
 
     public boolean autenticar(String nombreUsuario, String contrasenya) {
-        return (nombreUsuario == this.usuario && contrasenya == this.contrasenya);
+        return (nombreUsuario.equals(this.usuario) && contrasenya.equals(this.contrasenya));
     }
 
     public String getUsuario() {

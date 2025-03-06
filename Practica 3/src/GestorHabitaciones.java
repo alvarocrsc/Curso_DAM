@@ -1,13 +1,13 @@
 import java.util.Arrays;
 
 public class GestorHabitaciones {
-    private Habitacion[] habitaciones;
+    private Habitacion[] habitaciones = new Habitacion[0];
     private int cantidadHabitaciones;
 
     public void agregarHabitacion(int numero, Tipo tipo, double precio) {
         Habitacion habitacion = new Habitacion(numero, tipo, precio);
         if (buscarHabitacion(numero) == null) {
-            Arrays.copyOf(habitaciones, habitaciones.length + 1);
+            habitaciones = Arrays.copyOf(habitaciones, habitaciones.length + 1);
             habitaciones[habitaciones.length - 1] = habitacion;
             System.out.println("La habitación " + numero + " ha sido agregada con éxito.");
         } else {
