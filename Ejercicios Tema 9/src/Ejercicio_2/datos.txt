@@ -1,0 +1,4 @@
+alvaro, 0
+juan, 0
+4, 0
+Álvaro, 0

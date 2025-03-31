@@ -1,4 +1,5 @@
-import javax.swing.*;
+package Ejercicio_1;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -17,7 +18,7 @@ public class Main {
         BufferedReader in = null;
         try {
             if(nombreFichero.isEmpty()) {
-                nombreFichero = "prueba.txt";
+                nombreFichero = "Ejercicio_1/prueba.txt";
             }
             in = new BufferedReader(new FileReader("/home/alvaro/Documentos/GitHub/Curso_DAM/Ejercicios Tema 9/src/" + nombreFichero));
             String linea;
