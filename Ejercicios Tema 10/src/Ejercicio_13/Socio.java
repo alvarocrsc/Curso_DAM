@@ -28,6 +28,8 @@ public class Socio {
     public String toString() {
         return apodo +
                 "," + nombre +
-                "," + fecha;
+                "," + fecha.getYear() +
+                "," + fecha.getMonth() +
+                "," + fecha.getDay();
     }
 }
