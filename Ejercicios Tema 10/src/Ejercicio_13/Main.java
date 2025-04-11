@@ -113,8 +113,12 @@ public class Main {
     }
 
     public static void alta(Socio socio, Map<String, Socio> club) {
-        club.put(socio.getApodo(), socio);
-        System.out.println("\nEl socio con apodo " + socio.getApodo() + " ha sido insertado correctamente.");
+        if (club.containsKey(socio.getApodo())) {
+            System.out.println("\nYa existe un socio con apodo " + socio.getApodo() + ".");
+        } else {
+            club.put(socio.getApodo(), socio);
+            System.out.println("\nEl socio con apodo " + socio.getApodo() + " ha sido insertado correctamente.");
+        }
     }
 
     public static void baja(String apodo, Map<String, Socio> club) {
